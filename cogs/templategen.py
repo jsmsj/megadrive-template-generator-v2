@@ -28,6 +28,8 @@ def gen_template(genre:list,name,size,link,external_link=None):
     msg+=f"> Size: **{size}**\n\n"
     if external_link:
         msg+=external_link
+    if secret.custom_message:
+        msg+=f"\n\n{secret.custom_message}"
 
     return msg
 

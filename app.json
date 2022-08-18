@@ -4,14 +4,19 @@
     "website": "https://google.com",
     "repository": "https://github.com/jsmsj/megadrive-template-generator-v2",
     "env":{
-        "TOKEN" : {
+        "bot_token" : {
             "description": "Discord Bot token, follow this tutorial to generate it. https://discordpy.readthedocs.io/en/stable/discord.html",
             "required": true
         },
-        "PREFIX" : {
+        "prefix" : {
             "description": "Prefix of your discord bot Make sure to add a space after the prefix Eg: 'md '  Don't add the quotation marks !!!",
             "value": "md ",
             "required": true
+        },
+        "custom_message":{
+            "description":"Custom message to append at end of each upload",
+            "value":"none",
+            "required": false
         }
     }
 }
