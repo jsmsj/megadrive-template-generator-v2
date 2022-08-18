@@ -1,4 +1,4 @@
-# Megadrive Posting Template Generator Version 
+# Megadrive Posting Template Generator Version 2
 
 ## Deploy to Heroku
 
