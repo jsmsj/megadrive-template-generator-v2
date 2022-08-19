@@ -1,2 +1,5 @@
+## RENAME THIS FILE TO .env if you are deplying it locally
+
 bot_token = ''
 prefix = 'md '
+custom_message = 'Don't forget to ⭐'
