@@ -13,11 +13,11 @@ import base64
 import asyncio
 
 def b64e(s):
-    return base64.b64encode(s.encode()).decode()
+    return base64.urlsafe_b64encode(s.encode()).decode()
 
 
-def b64d(s):
-    return base64.b64decode(s).decode()
+# def b64d(s):
+#     return base64.b64decode(s).decode()
 
 def gen_template(genre:list,name,size,link,external_link=None):
     msg = ""
