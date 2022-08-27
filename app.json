@@ -17,6 +17,16 @@
             "description":"Custom message to append at end of each upload",
             "value":"none",
             "required": false
+        },
+        "sa_email":{
+            "description":"Email id of the service account. (open any serviceaccount.json file there you can find it. Not required though, but recommended for faster template generation). Leave empty if you do not know what it is. Looks like: mfc-something@iam.gserviceaccount.com",
+            "value":"",
+            "required":false
+        },
+        "private_key":{
+            "description":"The private_key of service account, (open any serviceaccount.json file there you can find it) Write it only if you have entered service account email. Leave empty if you do not know what it is. Looks like: -----BEGIN PRIVATE KEY-----SOMETHINGSOMETHINGSOMETHING\\n-----END PRIVATE KEY-----\\n ",
+            "value":"",
+            "required":false
         }
     }
 }

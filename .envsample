@@ -3,3 +3,5 @@
 bot_token = ''
 prefix = 'md '
 custom_message = 'Don't forget to ⭐'
+sa_email = 'mfc-something@iam.gserviceaccount.com'
+private_key = '-----BEGIN PRIVATE KEY-----SOMETHINGSOMETHINGSOMETHING\n-----END PRIVATE KEY-----\n'

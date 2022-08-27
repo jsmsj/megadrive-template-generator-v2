@@ -8,6 +8,8 @@ import urllib.parse
 from cogs._name_parser import get_title_from_name,get_year_from_name
 import requests
 from cogs._movie_tv_util import ImdbObject
+from cogs._sizecheck import service,GoogleDriveSizeCalculate
+import os
 
 import base64
 import asyncio
@@ -33,12 +35,6 @@ def gen_template(genre:list,name,size,link,external_link=None):
 
     return msg
 
-async def get_gd_details(link):
-    async with aiohttp.ClientSession() as session:
-            async with session.post('http://gdrivesize.jsmsj.repl.co/checksize', json={"link":link}) as resp:
-                print(resp.status)
-                file_details = await resp.json()
-                return file_details
 
 def encode_link(link,author):
     # https://links.gamesdrive.net/#/link/{base64}.{uploaderB64}
@@ -83,18 +79,16 @@ class TemplateGenerator(commands.Cog):
         except (ValueError,IndexError):
             return await ctx.send('Error, the chosen number is not valid / or you had sent some text instead of number.')
 
-        # file_details = await get_gd_details(link)
         async with ctx.typing():
-            resp = requests.post('http://gdrivesize.jsmsj.repl.co/checksize',json={"link":link})
-            print(resp.status_code)
-            file_details = resp.json()
+            if os.getenv('private_key') and os.getenv('sa_email'):
+                calculator = GoogleDriveSizeCalculate(service)
+                file_details = calculator.gdrive_checker(link)
+            else:
+                resp = requests.post('http://gdrivesize.jsmsj.repl.co/checksize',json={"link":link})
+                print(resp.status_code)
+                file_details = resp.json()
 
-        # async with httpx.AsyncClient() as client:
-        #     resp = await client.post('http://gdrivesize.jsmsj.repl.co/checksize',json={"link":link})
-        #     print(resp.status_code)
-        #     print(resp.text)
-        #     print((resp.html))
-        #     file_details = resp.json()
+
 
         name = get_title_from_name(file_details['name'])
         if name in ['',None,False] : name = file_details['name']
