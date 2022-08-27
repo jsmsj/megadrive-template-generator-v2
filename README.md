@@ -13,6 +13,15 @@
 6. Click the ✏️ icon and toggle the worker switch to `on`.
 7. Your bot will be online.
 
+---
+---
+# Please add your service account info, so that the bot can get size and name of the file/folder. 
+## The bot will work if you do not add it, but still it is recommended to do so, as it may timeout, because the sizechecking api is hosted on repl.it
+## Apart from that, if you use the bot which is already hosted by me, see below, it will not timeout, as it uses my service account info.
+
+---
+---
+
 ## Detailed Guide: (OLD BUT SAME STEPS)
 
 [rentry.co](https://rentry.co/t9zes)
