@@ -23,7 +23,7 @@ class General(commands.Cog):
     @commands.slash_command(name='ping',description='Used to check if bot is alive')
     async def slash_ping(self,ctx):
         """Used to check if bot is alive"""
-        await ctx.send(f'🏓 Pong! Latency: {round(self.bot.latency*1000)}ms')
+        await ctx.respond(f'🏓 Pong! Latency: {round(self.bot.latency*1000)}ms')
 
 
 def setup(bot):

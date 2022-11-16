@@ -188,8 +188,10 @@ class TemplateGenerator(commands.Cog):
                 await ctx.send(f'```\n{ultimate}\n```')
 
     @commands.slash_command(name="template",description="This is used to generate template by providing a google drive link.")
-    async def slash_template(self,ctx:commands.Context,link:discord.commands.Option(input_type="str",description="Google Drive link.")):
+    async def slash_template(self,ctx:discord.ApplicationContext,link:discord.commands.Option(input_type="str",description="Google Drive link.")):
         """This is used to generate template by providing a google drive link."""
+
+        await ctx.respond('See below 👇',ephemeral=True)
 
         category_message = """Choose a category and send the corrosponding number:
         1.  `🎎 Anime`
