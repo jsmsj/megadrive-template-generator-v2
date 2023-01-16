@@ -9,7 +9,7 @@ beautifulsoup4==4.11.1
 cachetools==5.2.0
 certifi==2022.6.15
 charset-normalizer==2.1.0
-cinemagoer==2022.2.11
+cinemagoer @ git+https://github.com/cinemagoer/cinemagoer@f23449c1ac5ee9ab728874c3fa18ba05a285ed9b
 colorama==0.4.5
 frozenlist==1.3.1
 google==3.0.0
@@ -35,7 +35,7 @@ parse-torrent-title==2.4
 pluggy==1.0.0
 protobuf==4.21.5
 py==1.11.0
-py-cord @ git+https://github.com/Pycord-Development/pycord.git@d9af9407bc87af7aa698ee335e979479db6ce530
+py-cord==2.3.2
 pyasn1==0.4.8
 pyasn1-modules==0.2.8
 pyparsing==3.0.9
@@ -50,6 +50,7 @@ sniffio==1.2.0
 soupsieve==2.3.2.post1
 SQLAlchemy==1.4.40
 tomli==2.0.1
+typing_extensions==4.4.0
 uritemplate==4.1.1
 urllib3==1.26.11
 yarl==1.8.1

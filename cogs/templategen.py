@@ -26,8 +26,8 @@ def gen_template(genre:list,name,size,link,external_link=None):
     if not len(genre) == 0:
         msg+=f"`{' | '.join(genre)}`\n"
     msg+=f":drive: **{name}**\n\n"
-    msg+=f"> Download Link: <{link}>\n"
-    msg+=f"> Size: **{size}**\n\n"
+    msg+=f"Size: **{size}**\n"
+    msg+=f"<{link}>\n"
     if external_link:
         msg+=external_link
     if secret.custom_message:
